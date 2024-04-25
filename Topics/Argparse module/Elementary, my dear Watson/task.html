@@ -1,0 +1,10 @@
+<h2>Elementary, my dear Watson!</h2>
+<div class="step-text">
+<p></p><p>Professor Moriarty has devised an evil plot encrypted using the Caesar cipher. To make matters worse, each word in the plan is encoded with a unique offset. Thankfully, Mary managed to get hold of the encoded text and the offset for each word. You also have a function Moriarty used to encrypt each word:</p><pre><code class="java">def decode_Caesar_cipher(s, n):
+    alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',.?!"
+    s = s.strip()
+    text = ''
+    for c in s:
+        text += alpha[(alpha.index(c) + n) % len(alpha)]
+    print(text)</code></pre><p>Now, it's your chance to demonstrate your prowess against malevolent forces. Write a program that accepts "--word" and "--offset" as command-line arguments. The program should decode the given word with the specified offset and print the result. Keep in mind, you already have the crucial function for decoding the message. Given a word and an offset, simply use the <strong>negative of the offset</strong> to reverse the encryption process.</p><p><strong>Tip:</strong></p><p>This task might be demanding, so let's simplify it:</p><ul><li><p>A significant part of the code is already prepared for you. Use the existing code and add a few lines to retrieve and parse command-line arguments,</p></li><li><p>Apply the negative of the offset to decode the string,</p></li><li><p>Print the decoded text without quotation marks, just as the given function does</p></li></ul><p>Remember, the program should not take any input; only parse command-line arguments as expected.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">--word fur!y,px --offset 13<br></code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Sherlock</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+</div>
